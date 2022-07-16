@@ -3,4 +3,4 @@
 # @TODO:
 # Create install script with ZSH+plugins
 
-echo $(pwd)/.zsh_aliases >> $HOME/.zshrc
+echo source $(pwd)/.zsh_aliases >> $HOME/.zshrc
