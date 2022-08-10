@@ -3,7 +3,6 @@ alias py='python3'
 alias pip='python3 -m pip'
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
-alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
 
 alias gpushnew='echo git rev-parse --abbrev-ref HEAD | git push -u'
 
@@ -13,3 +12,9 @@ alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git push'
+
+# Elvia specific
+alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
+alias adev='kubectl --context atlasclusterdev'
+alias atest='kubectl --context atlasclustertest'
+alias aprod='kubectl --context atlasclusterprod'
