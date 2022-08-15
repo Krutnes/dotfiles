@@ -1,8 +1,8 @@
 alias python='python3'
 alias py='python3'
 alias pip='python3 -m pip'
-alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
-alias sespr='ses reset && ses test'
+alias less='less +G'
+alias history='history | less'
 
 alias gpushnew='echo git rev-parse --abbrev-ref HEAD | git push -u'
 
@@ -18,3 +18,7 @@ alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
 alias adev='kubectl --context atlasclusterdev'
 alias atest='kubectl --context atlasclustertest'
 alias aprod='kubectl --context atlasclusterprod'
+
+# Sesam specific
+alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
+alias sespr='ses reset && ses test'
