@@ -12,6 +12,7 @@ alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git push'
+alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod" | xargs git branch -D'
 
 # Elvia specific
 alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
@@ -22,3 +23,4 @@ alias aprod='kubectl --context atlasclusterprod'
 # Sesam specific
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
+
