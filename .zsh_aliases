@@ -12,7 +12,7 @@ alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git push'
-alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod" | xargs git branch -D'
+alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod\|test" | xargs git branch -D'
 
 # Elvia specific
 alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
