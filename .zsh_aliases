@@ -15,8 +15,8 @@ alias gp='git push -u origin HEAD'
 alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod\|test" | xargs git branch -D'
 
 # Elvia specific
-alias elvia='cd /home/andreas/Sesam/Elvia/Apps/sesam-master-node-config/node'
-alias csvexport='cd /home/andreas/Sesam/Elvia/Apps/arcgis-un-global-csv-export && code /home/andreas/Sesam/Elvia/Apps/arcgis-un-global-csv-export'
+alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-master-node-config/node'
+alias csvexport='cd $HOME/Sesam/Elvia/Apps/arcgis-un-global-csv-export && code $HOME/Sesam/Elvia/Apps/arcgis-un-global-csv-export'
 alias adev='kubectl --context atlasclusterdev'
 alias atest='kubectl --context atlasclustertest'
 alias aprod='kubectl --context atlasclusterprod'
@@ -24,4 +24,4 @@ alias aprod='kubectl --context atlasclusterprod'
 # Sesam specific
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
-alias docs='cd /home/andreas/Sesam/Sesam-repos/docs && code /home/andreas/Sesam/Sesam-repos/docs'
+alias docs='cd $HOME/Sesam/Sesam-repos/docs && code $HOME/Sesam/Sesam-repos/docs'
