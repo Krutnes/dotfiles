@@ -8,11 +8,14 @@ alias gpushnew='echo git rev-parse --abbrev-ref HEAD | git push -u'
 
 alias sesun='ses -sync-config-file $HOME/temp/.syncconfig'
 
+# Git specific
 alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git push -u origin HEAD'
 alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod\|test" | xargs git branch -D'
+alias gpu='git pull'
+alias gputp='git switch test && git pull && git switch prod-2.0 && git pull'
 
 # Elvia specific
 alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-master-node-config/node'
