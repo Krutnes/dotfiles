@@ -1,3 +1,4 @@
+# test
 alias python='python3'
 alias py='python3'
 alias pip='python3 -m pip'
@@ -28,3 +29,5 @@ alias aprod='kubectl --context atlasclusterprod'
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
 alias docs='cd $HOME/Sesam/Sesam-repos/docs && code $HOME/Sesam/Sesam-repos/docs'
+
+alias sshrpi='ssh -p 10345 krutte@192.168.1.111 -i ~/.ssh/andreas-pc-RSA.private'
