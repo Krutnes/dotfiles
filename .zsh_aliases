@@ -1,33 +1,32 @@
 # test
 alias python='python3'
 alias py='python3'
-alias pip='python3 -m pip'
+alias pip='py -m pip'
 alias less='less +G'
-alias history='history | less'
-
-alias gpushnew='echo git rev-parse --abbrev-ref HEAD | git push -u'
-
-alias sesun='ses -sync-config-file $HOME/temp/.syncconfig'
 
 # Git specific
+# Prettified commit log:
 alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs='git status'
+alias gsw='git switch'
 alias gc='git commit -m'
 alias gp='git push -u origin HEAD'
+# Delete all local branches except master, trunk, prod and test
 alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod\|test" | xargs git branch -D'
 alias gpu='git pull'
-alias gputp='git switch test && git pull && git switch prod-2.0 && git pull'
+alias gputp='git switch prod && git pull && git switch test && git pull'
 
 # Elvia specific
 alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-master-node-config/node'
-alias csvexport='cd $HOME/Sesam/Elvia/Apps/arcgis-un-global-csv-export && code $HOME/Sesam/Elvia/Apps/arcgis-un-global-csv-export'
 alias adev='kubectl --context atlasclusterdev'
 alias atest='kubectl --context atlasclustertest'
 alias aprod='kubectl --context atlasclusterprod'
 
 # Sesam specific
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
+alias sesnew='sesam-new -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
+alias sesnewpr='sesnew reset && ses test'
 alias docs='cd $HOME/Sesam/Sesam-repos/docs && code $HOME/Sesam/Sesam-repos/docs'
 
 alias sshrpi='ssh -p 10345 krutte@192.168.1.111 -i ~/.ssh/andreas-pc-RSA.private'
