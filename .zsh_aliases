@@ -1,4 +1,6 @@
-# test
+alias l='ls -AlFh'
+alias ll='ls -1'
+
 alias python='python3'
 alias py='python3'
 alias pip='py -m pip'
@@ -8,10 +10,13 @@ alias less='less +G'
 # Prettified commit log:
 alias gil="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gl="git log --oneline --decorate"
+alias gd="git diff"
+alias ga="git add"
 alias gs='git status'
 alias gsw='git switch'
 alias gc='git commit -m'
 alias gp='git push -u origin HEAD'
+alias gpu="git pull"
 alias gitclean='git for-each-ref --format "%(refname:short)" refs/heads | grep -v "master\|trunk\|prod\|test" | xargs git branch -D'
 alias gpu='git pull'
 alias gputp='git switch prod && git pull && git switch test && git pull'
