@@ -22,7 +22,7 @@ alias gpu='git pull'
 alias gputp='git switch prod && git pull && git switch test && git pull'
 
 # Elvia specific
-alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-master-node-config/node'
+alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-node-config/node'
 alias adev='kubectl --context atlasclusterdev'
 alias atest='kubectl --context atlasclustertest'
 alias aprod='kubectl --context atlasclusterprod'
