@@ -24,9 +24,9 @@ alias gputp='git switch prod && git pull && git switch test && git pull'
 
 # Elvia specific
 alias elvia='cd $HOME/Sesam/Elvia/Apps/sesam-node-config/node'
-alias adev='kubectl --context atlasclusterdev'
-alias atest='kubectl --context atlasclustertest'
-alias aprod='kubectl --context atlasclusterprod'
+alias adev='kubectl config use-context atlasclusterdev'
+alias atest='kubectl config use-context atlasclustertest'
+alias aprod='kubectl config use-context atlasclusterprod'
 
 # Sesam specific
 alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
