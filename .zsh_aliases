@@ -29,7 +29,7 @@ alias atest='kubectl config use-context atlasclustertest'
 alias aprod='kubectl config use-context atlasclusterprod'
 
 # Sesam specific
-alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -vv -scheduler-mode poll -scheduler-request-mode async'
+alias ses='sesam -scheduler-max-run-time 4000 -print-scheduler-log -v -scheduler-mode poll -scheduler-request-mode async'
 alias sespr='ses reset && ses test'
 alias sesampy-download="curl -L https://api.github.com/repos/sesam-community/sesam-py/releases/latest | jq '.assets[]|select(.name | test(\".*osx.*\"))|.browser_download_url' | xargs wget -q -O- | tar -xz -C $HOME/Sesam/Apps/bin"
 alias docs='cd $HOME/Sesam/Sesam-repos/docs && code $HOME/Sesam/Sesam-repos/docs'
